@@ -8,6 +8,11 @@ async def hello():
     return {"message": "Hello World"}
 
 
+@app.get('/flo', tags=["home"])
+async def hello():
+    return {"message": "Hello World"}
+
+
 @app.get('/api', tags=["data"])
 async def prueba():
     return {"message": "Hello World"}
@@ -16,4 +21,3 @@ async def prueba():
 @app.get('/api/{id}', tags=["data"])
 async def id_prueba(id):
     return {"message": id}
-
